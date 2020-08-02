@@ -9,7 +9,7 @@ export default function SearchForm({ params, onParamChange }) {
           <Form.Label>Description</Form.Label>
           <Form.Control
             onChange={onParamChange}
-            value={params.description}
+            value={params.description || ''}
             name="description"
             type="text"
           />
@@ -18,7 +18,7 @@ export default function SearchForm({ params, onParamChange }) {
           <Form.Label>Location</Form.Label>
           <Form.Control
             onChange={onParamChange}
-            value={params.location}
+            value={params.location || ''}
             name="location"
             type="text"
           />
@@ -26,7 +26,7 @@ export default function SearchForm({ params, onParamChange }) {
         <Form.Group as={Col} sx="auto" className="ml-2">
           <Form.Check
             onChange={onParamChange}
-            value={params.full_time}
+            value={params.full_time || ''}
             name="full_time"
             id="full_time"
             label="Only Full Time"
